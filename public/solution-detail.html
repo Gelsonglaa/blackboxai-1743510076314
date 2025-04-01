@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/robot.svg" type="image/svg+xml">
+    <title>Detalhes da Solução | TechEcosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .screenshot:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">TechEcosystem</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Início</a>
+                <a href="apps.html" class="text-gray-600 hover:text-blue-600">Aplicativos</a>
+                <a href="tools.html" class="text-gray-600 hover:text-blue-600">Ferramentas</a>
+                <a href="suppliers.html" class="text-gray-600 hover:text-blue-600">Fornecedores</a>
+                <a href="solutions.html" class="text-gray-600 hover:text-blue-600">Soluções</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+            <div class="h-64 md:h-80 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                <div class="text-center text-white px-4">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">BusinessERP Pro</h1>
+                    <p class="text-xl mb-6">Solução completa de gestão empresarial para grandes corporações</p>
+                    <div class="flex justify-center space-x-4">
+                        <span class="bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">ERP</span>
+                        <span class="bg-white text-blue-600 text-sm font-semibold px-3 py-1 rounded-full">Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Details -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- About Section -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Sobre a Solução</h2>
+                    <p class="text-gray-600 mb-4">O BusinessERP Pro é uma plataforma abrangente de planejamento de recursos empresariais projetada para otimizar todas as operações da sua organização. Desde finanças até cadeia de suprimentos, nosso sistema integrado oferece visibilidade completa e controle sobre seus processos de negócios.</p>
+                    <p class="text-gray-600">Com mais de 15 anos no mercado, ajudamos mais de 500 empresas a transformarem suas operações e alcançarem novos patamares de eficiência.</p>
+                </div>
+
+                <!-- Features Section -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Principais Recursos</h2>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Gestão financeira completa com relatórios em tempo real</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Controle de estoque e cadeia de suprimentos integrado</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Módulo de RH com gestão de talentos e folha de pagamento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Business Intelligence com dashboards personalizáveis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span class="text-gray-600">Integração com principais marketplaces e plataformas de e-commerce</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Screenshots Section -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Galeria</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="overflow-hidden rounded-lg screenshot transition duration-300">
+                            <img src="https://images.pexels.com/photos/6804588/pexels-photo-6804588.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Dashboard" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg screenshot transition duration-300">
+                            <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Relatórios" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg screenshot transition duration-300">
+                            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Controle de Estoque" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <!-- Pricing Card -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Planos e Preços</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-700">Starter</h4>
+                            <p class="text-gray-600 text-sm">R$15.000/mês</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700">Professional</h4>
+                            <p class="text-gray-600 text-sm">R$25.000/mês</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-700">Enterprise</h4>
+                            <p class="text-gray-600 text-sm">Sob consulta</p>
+                        </div>
+                    </div>
+                    <button class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition">
+                        Solicitar Demonstração
+                    </button>
+                </div>
+
+                <!-- Supplier Info -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Fornecedor</h3>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-3">
+                            <i class="fas fa-building text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">CloudTech Inc</h4>
+                            <p class="text-gray-600 text-sm">Desde 2010</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-globe text-gray-400 mr-2"></i>
+                            <a href="#" class="text-blue-600 hover:underline">www.cloudtech.com.br</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-2"></i>
+                            <span class="text-gray-600">(11) 1234-5678</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                            <a href="mailto:contato@cloudtech.com.br" class="text-blue-600 hover:underline">contato@cloudtech.com.br</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating System -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Avaliações</h3>
+                    <div class="flex items-center mb-3">
+                        <div class="flex text-yellow-400 mr-2" id="averageRating">
+                            <!-- Stars will be inserted here by JS -->
+                        </div>
+                        <span class="text-gray-600" id="ratingCount">4.7 (128 avaliações)</span>
+                    </div>
+                    
+                    <!-- Rating Form -->
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Deixe sua avaliação</h4>
+                        <div class="flex mb-2" id="ratingStars">
+                            <i class="far fa-star text-yellow-400 text-xl cursor-pointer mr-1" data-rating="1"></i>
+                            <i class="far fa-star text-yellow-400 text-xl cursor-pointer mr-1" data-rating="2"></i>
+                            <i class="far fa-star text-yellow-400 text-xl cursor-pointer mr-1" data-rating="3"></i>
+                            <i class="far fa-star text-yellow-400 text-xl cursor-pointer mr-1" data-rating="4"></i>
+                            <i class="far fa-star text-yellow-400 text-xl cursor-pointer mr-1" data-rating="5"></i>
+                        </div>
+                        <textarea id="reviewText" class="w-full p-2 border rounded mb-2" placeholder="Escreva sua avaliação..."></textarea>
+                        <button id="submitReview" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                            Enviar Avaliação
+                        </button>
+                    </div>
+
+                    <!-- Reviews List -->
+                    <div id="reviewsContainer" class="space-y-3 max-h-60 overflow-y-auto mb-4">
+                        <!-- Reviews will be loaded here -->
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div id="pagination" class="flex justify-between items-center">
+                        <button id="prevPage" class="bg-gray-200 hover:bg-gray-300 text-gray-800 py-1 px-3 rounded disabled:opacity-50" disabled>
+                            <i class="fas fa-chevron-left mr-1"></i>Anterior
+                        </button>
+                        <span id="pageInfo" class="text-sm text-gray-600">Página 1</span>
+                        <button id="nextPage" class="bg-gray-200 hover:bg-gray-300 text-gray-800 py-1 px-3 rounded disabled:opacity-50">
+                            Próxima<i class="fas fa-chevron-right ml-1"></i>
+                        </button>
+                    </div>
+
+                    <script>
+                        // Get solution ID from URL or use default
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const solutionId = urlParams.get('id') || 'default';
+                        
+                        // Load reviews from localStorage or initialize
+                        let reviews = JSON.parse(localStorage.getItem(`reviews_${solutionId}`)) || [
+                            {id: 1, user: "João Silva", rating: 5, comment: "Excelente solução, transformou nossa empresa!", date: "15/05/2023"},
+                            {id: 2, user: "Maria Souza", rating: 4, comment: "Muito bom, mas poderia ter mais integrações", date: "22/06/2023"},
+                            {id: 3, user: "Carlos Oliveira", rating: 5, comment: "Implementação rápida e suporte excelente", date: "10/07/2023"}
+                        ];
+
+                        // Pagination variables
+                        const reviewsPerPage = 3;
+                        let currentPage = 1;
+
+                        // Initialize rating stars
+                        const stars = document.querySelectorAll('#ratingStars i');
+                        let selectedRating = 0;
+                        
+                        stars.forEach(star => {
+                            star.addEventListener('mouseover', () => {
+                                const rating = parseInt(star.getAttribute('data-rating'));
+                                highlightStars(rating);
+                            });
+                            
+                            star.addEventListener('click', () => {
+                                selectedRating = parseInt(star.getAttribute('data-rating'));
+                            });
+                            
+                            star.addEventListener('mouseout', () => {
+                                if (selectedRating === 0) {
+                                    resetStars();
+                                } else {
+                                    highlightStars(selectedRating);
+                                }
+                            });
+                        });
+                        
+                        function highlightStars(rating) {
+                            stars.forEach(star => {
+                                const starRating = parseInt(star.getAttribute('data-rating'));
+                                if (starRating <= rating) {
+                                    star.classList.remove('far');
+                                    star.classList.add('fas');
+                                } else {
+                                    star.classList.remove('fas');
+                                    star.classList.add('far');
+                                }
+                            });
+                        }
+                        
+                        function resetStars() {
+                            stars.forEach(star => {
+                                star.classList.remove('fas');
+                                star.classList.add('far');
+                            });
+                        }
+                        
+                        // Update pagination controls
+                        function updatePagination() {
+                            const totalPages = Math.ceil(reviews.length / reviewsPerPage);
+                            document.getElementById('pageInfo').textContent = `Página ${currentPage} de ${totalPages}`;
+                            document.getElementById('prevPage').disabled = currentPage === 1;
+                            document.getElementById('nextPage').disabled = currentPage === totalPages;
+                        }
+                        
+                        // Load reviews for current page
+                        function loadReviews() {
+                            const container = document.getElementById('reviewsContainer');
+                            container.innerHTML = '';
+                            
+                            // Calculate average rating
+                            const average = reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length;
+                            document.getElementById('ratingCount').textContent = `${average.toFixed(1)} (${reviews.length} avaliações)`;
+                            
+                            // Display average stars
+                            const averageStars = document.getElementById('averageRating');
+                            averageStars.innerHTML = '';
+                            for (let i = 1; i <= 5; i++) {
+                                const star = document.createElement('i');
+                                star.className = i <= Math.round(average) ? 'fas fa-star' : 'far fa-star';
+                                averageStars.appendChild(star);
+                            }
+                            
+                            // Get reviews for current page
+                            const startIdx = (currentPage - 1) * reviewsPerPage;
+                            const endIdx = startIdx + reviewsPerPage;
+                            const pageReviews = reviews.slice(startIdx, endIdx);
+                            
+                            // Display reviews
+                            pageReviews.forEach(review => {
+                                const reviewDiv = document.createElement('div');
+                                reviewDiv.className = 'p-3 bg-gray-50 rounded';
+                                reviewDiv.innerHTML = `
+                                    <div class="flex justify-between mb-1">
+                                        <span class="font-medium">${review.user}</span>
+                                        <div class="text-yellow-400">
+                                            ${'<i class="fas fa-star"></i>'.repeat(review.rating)}
+                                            ${'<i class="far fa-star"></i>'.repeat(5 - review.rating)}
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-1">${review.comment}</p>
+                                    <p class="text-gray-400 text-xs">${review.date}</p>
+                                `;
+                                container.appendChild(reviewDiv);
+                            });
+                            
+                            updatePagination();
+                        }
+                        
+                        // Submit new review
+                        document.getElementById('submitReview').addEventListener('click', () => {
+                            const comment = document.getElementById('reviewText').value.trim();
+                            if (selectedRating === 0) {
+                                alert('Por favor, selecione uma avaliação');
+                                return;
+                            }
+                            
+                            if (comment.length < 10) {
+                                alert('Por favor, escreva uma avaliação mais detalhada');
+                                return;
+                            }
+                            
+                            // In a real app, this would be sent to a server
+                            const newReview = {
+                                id: reviews.length + 1,
+                                user: "Usuário Anônimo",
+                                rating: selectedRating,
+                                comment: comment,
+                                date: new Date().toLocaleDateString('pt-BR')
+                            };
+                            
+                            reviews.push(newReview);
+                            loadReviews();
+                            
+                            // Reset form
+                            document.getElementById('reviewText').value = '';
+                            selectedRating = 0;
+                            resetStars();
+                            
+                            alert('Avaliação enviada com sucesso!');
+                        });
+                        
+                        // Pagination event listeners
+                        document.getElementById('prevPage').addEventListener('click', () => {
+                            if (currentPage > 1) {
+                                currentPage--;
+                                loadReviews();
+                            }
+                        });
+                        
+                        document.getElementById('nextPage').addEventListener('click', () => {
+                            if (currentPage < Math.ceil(reviews.length / reviewsPerPage)) {
+                                currentPage++;
+                                loadReviews();
+                            }
+                        });
+                        
+                        // Initial load
+                        loadReviews();
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Solutions -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Soluções Relacionadas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-gray-400 text-5xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">DataInsights</h3>
+                        <p class="text-gray-600 text-sm mb-2">Business Intelligence avançado</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-xs">A partir de R$2.200/mês</span>
+                            <a href="#" class="text-blue-600 hover:underline text-sm">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-users text-gray-400 text-5xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">Customer360</h3>
+                        <p class="text-gray-600 text-sm mb-2">CRM completo</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-xs">A partir de R$3.500/mês</span>
+                            <a href="#" class="text-blue-600 hover:underline text-sm">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-warehouse text-gray-400 text-5xl"></i>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">StockMaster</h3>
+                        <p class="text-gray-600 text-sm mb-2">Gestão de estoque</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-xs">A partir de R$1.800/mês</span>
+                            <a href="#" class="text-blue-600 hover:underline text-sm">Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                        <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                        <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                    <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-robot text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">TechEcosystem</span>
+                    </div>
+                    <p class="text-gray-400">O maior diretório de soluções tecnológicas da América Latina.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categorias</h3>
+                    <ul class="space-y-2">
+                        <li><a href="apps.html" class="text-gray-400 hover:text-white transition">Aplicativos</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-white transition">Ferramentas</a></li>
+                        <li><a href="suppliers.html" class="text-gray-400 hover:text-white transition">Fornecedores</a></li>
+                        <li><a href="solutions.html" class="text-gray-400 hover:text-white transition">Soluções</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Receba as novidades do ecossistema tech</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-blue-400 w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 TechEcosystem. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
