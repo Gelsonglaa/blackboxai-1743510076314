@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/robot.svg" type="image/svg+xml">
+    <title>Ferramentas para Devs | TechEcosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-robot text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">TechEcosystem</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Início</a>
+                <a href="apps.html" class="text-gray-600 hover:text-blue-600">Aplicativos</a>
+                <a href="tools.html" class="text-blue-600 font-medium">Ferramentas</a>
+                <a href="suppliers.html" class="text-gray-600 hover:text-blue-600">Fornecedores</a>
+                <a href="solutions.html" class="text-gray-600 hover:text-blue-600">Soluções</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Ferramentas para Desenvolvedores</h1>
+            <div class="flex space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition">
+                    <i class="fas fa-filter mr-2"></i>Filtrar
+                </button>
+                <button class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-md transition">
+                    <i class="fas fa-plus mr-2"></i>Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Tools Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tool 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 bg-indigo-500 flex items-center justify-center">
+                    <i class="fas fa-code text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">IDE</span>
+                        <span class="ml-auto text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">CodeMaster Pro</h3>
+                    <p class="text-gray-600 mb-4">Ambiente de desenvolvimento completo com suporte a múltiplas linguagens.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">Open Source</span>
+                        <a href="solution-detail.html" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                            Detalhes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 bg-red-500 flex items-center justify-center">
+                    <i class="fas fa-server text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">CLOUD</span>
+                        <span class="ml-auto text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">CloudDeploy</h3>
+                    <p class="text-gray-600 mb-4">Ferramenta de deploy automatizado para ambientes cloud.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">Freemium</span>
+                        <a href="solution-detail.html" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                            Detalhes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tool 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                <div class="h-48 bg-yellow-500 flex items-center justify-center">
+                    <i class="fas fa-bug text-white text-6xl"></i>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">DEBUG</span>
+                        <span class="ml-auto text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">DebugNinja</h3>
+                    <p class="text-gray-600 mb-4">Ferramenta avançada de debugging para aplicações complexas.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">R$99,90/mês</span>
+                        <a href="solution-detail.html" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                            Detalhes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-robot text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">TechEcosystem</span>
+                    </div>
+                    <p class="text-gray-400">O maior diretório de soluções tecnológicas da América Latina.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categorias</h3>
+                    <ul class="space-y-2">
+                        <li><a href="apps.html" class="text-gray-400 hover:text-white transition">Aplicativos</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-white transition">Ferramentas</a></li>
+                        <li><a href="solutions.html" class="text-gray-400 hover:text-white transition">Soluções</a></li>
+                        <li><a href="suppliers.html" class="text-gray-400 hover:text-white transition">Fornecedores</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Receba as novidades do ecossistema tech</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-blue-400 w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 TechEcosystem. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
