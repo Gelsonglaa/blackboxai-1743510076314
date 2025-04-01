@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/robot.svg" type="image/svg+xml">
+    <title>Ecossistema Tecnológico | O maior diretório de soluções tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-robot text-yellow-600 text-2xl"></i>
+            <span class="text-xl font-bold text-red-600">TechAngola</span>
+        </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-blue-600 font-medium">Início</a>
+                <a href="apps.html" class="text-gray-600 hover:text-blue-600">Aplicativos</a>
+                <a href="tools.html" class="text-gray-600 hover:text-blue-600">Ferramentas</a>
+                <a href="suppliers.html" class="text-gray-600 hover:text-blue-600">Fornecedores</a>
+                <a href="solutions.html" class="text-gray-600 hover:text-blue-600">Soluções</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">O maior ecossistema tecnológico de Angola</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Conecte-se com as melhores soluções tecnológicas do mercado angolano</p>
+            <div class="max-w-md mx-auto relative">
+                <input type="text" id="searchInput" placeholder="Buscar soluções..." 
+                       class="w-full py-3 px-4 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                       onkeyup="searchSolutions()">
+                <div id="searchResults" class="hidden absolute z-10 w-full mt-1 bg-white rounded-lg shadow-lg max-h-96 overflow-y-auto"></div>
+            </div>
+
+            <script>
+                const solutions = [
+                    {name: "BusinessERP Pro", category: "ERP", page: "solution-detail.html"},
+                    {name: "Customer360", category: "CRM", page: "solution-detail.html"},
+                    {name: "DataInsights", category: "BI", page: "solution-detail.html"},
+                    {name: "CloudDeploy", category: "Ferramentas", page: "tools.html"},
+                    {name: "AppGestão", category: "Aplicativos", page: "apps.html"}
+                ];
+
+                function searchSolutions() {
+                    const input = document.getElementById('searchInput').value.toLowerCase();
+                    const results = document.getElementById('searchResults');
+                    results.innerHTML = '';
+                    
+                    if (input.length < 2) {
+                        results.classList.add('hidden');
+                        return;
+                    }
+
+                    const matches = solutions.filter(item => 
+                        item.name.toLowerCase().includes(input) || 
+                        item.category.toLowerCase().includes(input)
+                    );
+
+                    if (matches.length > 0) {
+                        matches.forEach(item => {
+                            const div = document.createElement('div');
+                            div.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200';
+                            div.innerHTML = `
+                                <div class="font-medium">${item.name}</div>
+                                <div class="text-sm text-gray-500">${item.category}</div>
+                            `;
+                            div.onclick = () => window.location.href = item.page;
+                            results.appendChild(div);
+                        });
+                        results.classList.remove('hidden');
+                    } else {
+                        results.innerHTML = '<div class="p-3 text-gray-500">Nenhum resultado encontrado</div>';
+                        results.classList.remove('hidden');
+                    }
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Explore por categoria</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- App Category -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="window.location.href='apps.html'">
+                    <div class="p-6 text-center">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Aplicativos</h3>
+                        <p class="text-gray-600 text-sm">+120 soluções</p>
+                    </div>
+                </div>
+
+                <!-- Tools Category -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="window.location.href='tools.html'">
+                    <div class="p-6 text-center">
+                        <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-tools text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Ferramentas</h3>
+                        <p class="text-gray-600 text-sm">+85 ferramentas</p>
+                    </div>
+                </div>
+
+                <!-- Solutions Category -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="window.location.href='solutions.html'">
+                    <div class="p-6 text-center">
+                        <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Soluções</h3>
+                        <p class="text-gray-600 text-sm">+200 soluções</p>
+                    </div>
+                </div>
+
+                <!-- Suppliers Category -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="window.location.href='suppliers.html'">
+                    <div class="p-6 text-center">
+                        <div class="bg-orange-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-building text-orange-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Fornecedores</h3>
+                        <p class="text-gray-600 text-sm">+50 empresas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Solutions -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Soluções em destaque</h2>
+                <a href="#" class="text-blue-600 hover:underline">Ver todas</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">CLOUD</span>
+                            <span class="ml-auto text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">CloudTech Solutions</h3>
+                        <p class="text-gray-600 mb-4">Plataforma completa de gerenciamento em nuvem para empresas de todos os portes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Desde 25.000 Kz/mês</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition"
+                                    onclick="window.location.href='solution-detail.html?id=cloudtech'">
+                                Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-green-500 flex items-center justify-center">
+                        <i class="fas fa-lock text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">SEGURANÇA</span>
+                            <span class="ml-auto text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">SecureNet</h3>
+                        <p class="text-gray-600 mb-4">Solução completa de cibersegurança com monitoramento 24/7.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Desde 42.000 Kz/mês</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                                Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="h-48 bg-purple-500 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">ANÁLISE</span>
+                            <span class="ml-auto text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">DataInsight Pro</h3>
+                        <p class="text-gray-600 mb-4">Ferramenta avançada de análise de dados com IA integrada.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 text-sm">Desde 68.000 Kz/mês</span>
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-4 rounded-md text-sm transition">
+                                Detalhes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua solução tecnológica aqui</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Cadastre sua empresa ou solução no maior ecossistema tecnológico da América Latina</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition">
+                    Cadastrar solução
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-blue-700 font-semibold py-3 px-8 rounded-lg transition">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-robot text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">TechEcosystem</span>
+                    </div>
+        <p class="text-gray-400">O maior diretório tecnológico de Angola - Conectando o ecossistema digital angolano.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Categorias</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Aplicativos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ferramentas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Soluções</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Fornecedores</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidade</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Receba as novidades do ecossistema tech</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-blue-400 w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-md transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 TechEcosystem. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.querySelector('input[type="text"]').addEventListener('keyup', function(e) {
+            if(e.key === 'Enter') {
+                alert('Funcionalidade de busca será implementada em breve!');
+            }
+        });
+    </script>
+    <script src="js/navigation-angola.js"></script>
+</body>
+</html>
